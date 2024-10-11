@@ -7,12 +7,12 @@ metadata:
   namespace: default
   labels:
     app.kubernetes.io/name: splunk-otel-collector
-    helm.sh/chart: splunk-otel-collector-0.99.0
+    helm.sh/chart: splunk-otel-collector-0.110.0
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: default
-    app.kubernetes.io/version: "0.99.0"
+    app.kubernetes.io/version: "0.110.0"
     app: splunk-otel-collector
-    chart: splunk-otel-collector-0.99.0
+    chart: splunk-otel-collector-0.110.0
     release: default
     heritage: Helm
 data:
@@ -148,6 +148,7 @@ data:
         endpoint: ${K8S_NODE_IP}:10250
         extra_metadata_labels:
         - container.id
+        insecure_skip_verify: false
         metric_groups:
         - container
         - pod
