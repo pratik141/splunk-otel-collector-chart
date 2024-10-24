@@ -148,6 +148,7 @@ data:
         endpoint: ${K8S_NODE_IP}:10255
         extra_metadata_labels:
         - container.id
+        insecure_skip_verify: false
         metric_groups:
         - container
         - pod
